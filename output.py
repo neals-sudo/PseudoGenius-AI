@@ -1,4 +1,4 @@
-```This code has been generated with AI```
+# This code has been generated with AI
 
 
 # Function to calculate the factorial of a number
@@ -6,7 +6,7 @@ def factorial(n):
     if n == 0:
         return 1
     else:
-        return n * factogrial(n - 1)
+        return n * factorial(n - 1)
 
 # Function to check if a number is even
 def is_even(number):
