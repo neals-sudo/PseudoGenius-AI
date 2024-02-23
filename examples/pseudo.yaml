@@ -1,0 +1,38 @@
+HttpServer:
+  description: "A server that handles user data with PostgreSQL and provides full query codes"
+  steps:
+    - startHTTPServer: "Initiate HTTP server on a specified port"
+    - connectToPostgreSQL: "Establish a connection to the PostgreSQL database"
+  config:
+    - port: 8080
+    - dbString: "postgres://admin:pass@localhost/test?sslmode=disable"
+    - log: "make sure to handle errors and output the logs or return them"
+    - validation: "make sure the arguments are not empty in all of the routes"
+
+  routes:    
+    - path: "/api/create"
+      method: "POST"
+      description: "Create a new user and submit it to the database"      
+      parameters:
+        - username
+        - password
+      steps:
+        - step1: "Ensure username and password are valid"
+        - step2: "Insert new user record into PostgreSQL"
+        - step3: "return 200 OK if created or error if not"
+    - path: "/api/password_change"
+      method: "PUT"
+      description: "Update an existing user's password based on the username"
+      parameters:
+        - username
+        - newpassword
+    - path: "/api/retrieve"
+      method: "GET"
+      description: "return 200 OK if user found, and 404 if it isn't"
+      parameters:
+        - username: string
+    - path: "/api/remove"
+      method: "DELETE"
+      description: "Remove a user record from the database based on the username"
+      parameters:
+        - username: "string"
