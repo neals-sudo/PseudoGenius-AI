@@ -1,6 +1,6 @@
 # PseudoGenius AI 🚀
 
-Hey there! Welcome to **PseudoGenius AI**: Your new best friend for creating your own language of pseudocode into legit, runnable code in whatever language you need without worrying about syntax!
+Hey there! Welcome to **PseudoGenius AI**: Your new best friend for creating your programming language of pseudocode and converting it into legit, runnable code in whatever language you need without worrying about syntax!
 
 The code is powered by ChatGPT-4 model. 
 
