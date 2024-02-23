@@ -6,8 +6,6 @@ Hey there! Welcome to **PseudoGenius AI**: Your new best friend for coding your 
 
 Design your pseudocode in any style you like, using the versatile YAML syntax. This solution effortlessly transforms it into code for your chosen programming language, eliminating the need to memorize syntax details.
 
-Explore our [examples folder](examples/) to witness it in action and get inspired!
-
 ## Getting Started
 
 First things first, let's get you set up. You're going to need Python and some magic spells (aka libraries) to get rolling.
@@ -34,10 +32,7 @@ OPENAI_API_KEY=your_openai_api_key_here
 
 ### Usage
 
-Ready to turn pseudocode into real code? Here's how you do it:
-
-
-Create your pseudocode file inside of pseudo.yaml file, and then run:
+Create your pseudocode code inside of pseudo.yaml file, and then run:
 
 ```bash
 
@@ -45,6 +40,10 @@ python main.py <language>
 ```
 
 Replace <language> with the programming language that you want. Hit enter, and watch the magic happen!
+
+## Examples
+
+Explore our [examples folder](examples/) to witness it in action and get inspired!
 
 ### Inspiration
 
