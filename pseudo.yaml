@@ -1,0 +1,42 @@
+algorithm:
+  name: FactorialCalculator
+  description: Calculate the factorial of a number and determine if it is even or odd.
+  functions:
+    - name: factorial
+      description: Calculate the factorial of a number.
+      parameters:
+        - name: n
+          type: integer
+      returns: integer
+      logic:
+        - if: "n == 0"
+          return: 1
+        - else: 
+          return: "n * factorial(n - 1)"
+    - name: is_even
+      description: Check if a number is even.
+      parameters:
+        - name: number
+          type: integer
+      returns: boolean
+      logic:
+        - return: "number % 2 == 0"
+  main:
+    variables:
+      - name: num
+        type: integer
+        value: 5
+    operations:
+      - operation: call_function
+        function: factorial
+        arguments: [num]
+        output: factorial_result
+      - operation: call_function
+        function: is_even
+        arguments: [factorial_result]
+        output: is_even_result
+    output:
+      - if: "is_even_result == True"
+        print: "The factorial of {num} is {factorial_result}, which is an even number."
+      - else:
+        print: "The factorial of {num} is {factorial_result}, which is an odd number."
