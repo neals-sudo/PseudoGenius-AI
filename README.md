@@ -1,6 +1,6 @@
 # PseudoGenius AI 🚀
 
-Hey there! Welcome to **PseudoGenius AI** - your new best friend for creating your own language of pseudocode into legit, runnable code in whatever language you need without worrying about syntax!
+Hey there! Welcome to **PseudoGenius AI**: Your new best friend for creating your own language of pseudocode into legit, runnable code in whatever language you need without worrying about syntax!
 
 The code is powered by ChatGPT-4 model. 
 
@@ -44,7 +44,7 @@ Replace <language> with the programming language that you want. Hit enter, and w
 
 ### Inspiration
 
-https://youtu.be/iO1mwxPNP5A. If you've got a minute, definitely check it out. It's pretty cool and gave us the inspiration to build this project.
+https://youtu.be/iO1mwxPNP5A. If you've got a minute, definitely check it out. It's pretty cool and inspired me to build this project.
 
 ## Contributing
 
@@ -52,5 +52,5 @@ Feel free to fork the repo, make your changes, and hit us up with a pull request
 
 # License
 
-Use it, modify it, and spread the love. Just remember to give a shoutout back here if you do something cool with it!
+Use it, modify it, and spread the love. Just remember to shout back here if you do something cool with it!
 
