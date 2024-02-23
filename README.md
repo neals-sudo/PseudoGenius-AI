@@ -2,7 +2,11 @@
 
 Hey there! Welcome to **PseudoGenius AI**: Your new best friend for creating your programming language of pseudocode and converting it into legit, runnable code in whatever language you need without worrying about syntax!
 
-The code is powered by ChatGPT-4 model. 
+## How it works
+
+Design your pseudocode in any style you like, using the versatile YAML syntax. This solution effortlessly transforms it into code for your chosen programming language, eliminating the need to memorize syntax details.
+
+Explore our examples/ folder to witness it in action and get inspired!
 
 ## Getting Started
 
