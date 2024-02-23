@@ -1,0 +1,18 @@
+GetRandomFact:
+  description: "Fetch a random fact about cats from an external API and return it to the user"
+  steps:
+    - action: "Send GET request"
+      url: "https://meowfacts.herokuapp.com/?count=1"
+      description: "Request a random cat fact from the API"
+      
+    - action: "Decode JSON response"
+      description: "Extract the JSON object from the API response"
+      
+    - action: "Read Fact"
+      description: "Access the 'data' dictionary and retrieve the first item (fact)"
+      item: "data[0]"
+      
+    - action: "Return Fact"
+      description: "Return the extracted fact to the user"
+  validation: "make sure the http response is 200 and the response is valid"
+  logs: "print every step of the way of the code and stop program if any error happened"
