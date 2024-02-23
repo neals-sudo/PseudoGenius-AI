@@ -52,7 +52,7 @@ def generate_code_with_gpt(pseudo_yaml, language):
     pseudocode = json.dumps(pseudo_yaml, indent=2)
     
     # Prepare the prompt for GPT-4, specifying the target programming language
-    prompt = f"Convert the following pseudocode to {language} code ( make sure to give me comments and return the code only with no description):\n{pseudocode}"
+    prompt = f"Convert the following pseudocode to {language} code ( make sure that the code is complete and executable and complete comments and return the code only with no description):\n{pseudocode}"
     
     completion = openai.chat.completions.create(
         model="gpt-4",
