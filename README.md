@@ -1,12 +1,12 @@
 # PseudoGenius AI 🚀
 
-Hey there! Welcome to **PseudoGenius AI**: Your new best friend for creating your programming language of pseudocode and converting it into legit, runnable code in whatever language you need without worrying about syntax!
+Hey there! Welcome to **PseudoGenius AI**: Your new best friend for coding your own pseudocode language and converting it into runnable code in whatever language you need without worrying about syntax!
 
 ## How it works
 
 Design your pseudocode in any style you like, using the versatile YAML syntax. This solution effortlessly transforms it into code for your chosen programming language, eliminating the need to memorize syntax details.
 
-Explore our examples/ folder to witness it in action and get inspired!
+Explore our [examples folder](examples/) to witness it in action and get inspired!
 
 ## Getting Started
 
