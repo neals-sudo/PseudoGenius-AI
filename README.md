@@ -48,7 +48,7 @@ Replace <language> with the programming language that you want. Hit enter, and w
 
 ### Inspiration
 
-https://youtu.be/iO1mwxPNP5A. If you've got a minute, definitely check it out. It's pretty cool and inspired me to build this project.
+Inspired from this video: https://youtu.be/iO1mwxPNP5A
 
 ## Contributing
 
