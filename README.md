@@ -48,10 +48,6 @@ Explore our [examples folder](examples/) to witness it in action and get inspire
 - [Http Server Pseudocode](/examples/httpServer/pseudo.yaml)
 - [Returns random cat fact pseudocode](/examples/catFactFetcher/pseudo.yaml)
 
-### Inspiration
-
-Inspired by this video: https://youtu.be/iO1mwxPNP5A
-
 ## Contributing
 
 Feel free to fork the repo, make your changes, and hit us up with a pull request.
