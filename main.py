@@ -1,10 +1,9 @@
 import sys
 import yaml
-import openai
 import json
-import os
+from chatgpt import generate_code_with_gpt
+from gemini import generate_code_with_gemini
 
-openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 
 # Language extension mapping
@@ -47,34 +46,6 @@ def parse_yaml(file_path):
     with open(file_path, 'r') as file:
         return yaml.safe_load(file)
 
-def generate_code_with_gpt(pseudo_yaml, language):
-    # Convert the YAML structure to a string that resembles pseudocode
-    pseudocode = json.dumps(pseudo_yaml, indent=2)
-    
-    # Prepare the prompt for GPT-4, specifying the target programming language
-    prompt = f"Convert the following pseudocode to {language} code ( make sure that the code is complete and executable and complete comments and return the code only with no description):\n{pseudocode}"
-    
-    completion = openai.chat.completions.create(
-        model="gpt-4",
-        messages=[
-            {
-                "role": "user",
-                "content": prompt,
-            },
-        ],
-        temperature=0.5,
-        max_tokens=4096,
-        top_p=1.0,
-        frequency_penalty=0.0,
-        presence_penalty=0.0,
-    )
-    result =  completion.choices[0].message.content
-    if "```" in result:
-        result = result.split("```")[1]
-        result = "\n".join(result.split("\n")[1:])
-
-    return result
-
 def save_output(code, language):
     extension = language_extensions.get(language, 'txt')  # Fallback to .txt for unsupported languages
     filename = f"output.{extension}"
@@ -83,20 +54,33 @@ def save_output(code, language):
     print(f"Code has been generated and saved to {filename}")
 
 def main():
-    if len(sys.argv) != 2:
-        print(sys.argv)
-        print("Usage: python main.py <language>")
+    if len(sys.argv) != 3:
+        print("Usage: python main.py <engine> <language>")
         sys.exit(1)
     
+    engine = sys.argv[2].lower()
+    if engine not in ["chatgpt", "gemini"]:
+        print(f"Error: The specified engine '{engine}' is not supported. Support engines: chatgpt, gemini")
+        sys.exit(1)
     language = sys.argv[1].lower()
-    yaml_path = "pseudo.yaml"
-
-    if language not in language_extensions:
-        print(f"Error: The specified language '{language}' is not supported.")
+    if not language:
+        print(f"Error: Language string is empty.")
         sys.exit(1)
     
+    # Parse the YAML code from the the file
+    yaml_path = "pseudo.yaml"
     pseudo_yaml = parse_yaml(yaml_path)
-    code = generate_code_with_gpt(pseudo_yaml, language)
+
+    # Convert the YAML structure to a string that resembles pseudocode
+    pseudocode = json.dumps(pseudo_yaml, indent=2)
+
+    # get the code generated
+    if engine == "gemini":
+        code = generate_code_with_gemini(pseudocode, language)
+    else:
+        code = generate_code_with_gpt(pseudocode, language)
+
+    # save to output
     save_output(code, language)
 
 if __name__ == "__main__":
