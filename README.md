@@ -31,8 +31,9 @@ OPENAI_API_KEY=your_openai_api_key
 GEMINI_API_KEY=your_gemini_api_key
 ```
 3. Replace your_openai_api_key with your actual OpenAI API key.
-4. Replace your_gemini_api_key with your gemini app 
+4. Replace your_gemini_api_key with your GEMINI API key from here.
 
+You can get Google GEMINI API Key for free (here!)[https://aistudio.google.com/app/apikey]
 
 ### Usage
 
