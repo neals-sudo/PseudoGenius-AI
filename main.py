@@ -59,11 +59,11 @@ def main():
         print("Usage: python main.py <engine> <language>")
         sys.exit(1)
     
-    engine = sys.argv[2].lower()
+    engine = sys.argv[1].lower()
     if engine not in ["chatgpt", "gemini"]:
         print(f"Error: The specified engine '{engine}' is not supported. Support engines: chatgpt, gemini")
         sys.exit(1)
-    language = sys.argv[1].lower()
+    language = sys.argv[2].lower()
     if not language:
         print(f"Error: Language string is empty.")
         sys.exit(1)

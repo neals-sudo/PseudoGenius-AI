@@ -1,3 +1,4 @@
 output.*
 .env
+*.pyc
 .idea/
