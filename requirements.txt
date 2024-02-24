@@ -1,2 +1,3 @@
 pyyaml
 openai
+google-generativeai
