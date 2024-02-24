@@ -5,7 +5,6 @@ from chatgpt import generate_code_with_gpt
 from gemini import generate_code_with_gemini
 
 
-
 # Language extension mapping
 language_extensions = {
     'python': 'py',
@@ -46,12 +45,14 @@ def parse_yaml(file_path):
     with open(file_path, 'r') as file:
         return yaml.safe_load(file)
 
+
 def save_output(code, language):
     extension = language_extensions.get(language, 'txt')  # Fallback to .txt for unsupported languages
     filename = f"output.{extension}"
     with open(filename, 'w') as file:
         file.write(code)
     print(f"Code has been generated and saved to {filename}")
+
 
 def main():
     if len(sys.argv) != 3:
@@ -67,7 +68,7 @@ def main():
         print(f"Error: Language string is empty.")
         sys.exit(1)
     
-    # Parse the YAML code from the the file
+    # Parse the YAML code
     yaml_path = "pseudo.yaml"
     pseudo_yaml = parse_yaml(yaml_path)
 
@@ -82,6 +83,7 @@ def main():
 
     # save to output
     save_output(code, language)
+
 
 if __name__ == "__main__":
     main()

@@ -2,6 +2,8 @@
 
 Hey there! Welcome to **PseudoGenius AI**: Your new best friend for coding your own pseudocode language and converting it into runnable code in whatever language you need without worrying about syntax!
 
+It supports both ChatGPT-4 and Gemini Pro!
+
 ## How it works
 
 Design your pseudocode in any style you like, using the versatile YAML syntax. This solution effortlessly transforms it into code for your chosen programming language, eliminating the need to memorize syntax details.
@@ -25,9 +27,11 @@ Before you start turning pseudocode into real code, you need to enter your OpenA
 2. Open .env and add the following line:
 ```makefile
 
-OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_API_KEY=your_openai_api_key
+GEMINI_API_KEY=your_gemini_api_key
 ```
-3. Replace your_openai_api_key_here with your actual OpenAI API key.
+3. Replace your_openai_api_key with your actual OpenAI API key.
+4. Replace your_gemini_api_key with your gemini app 
 
 
 ### Usage
@@ -36,9 +40,10 @@ Create your pseudocode code inside of pseudo.yaml file, and then run:
 
 ```bash
 
-python main.py <language>
+python main.py <engine> <language>
 ```
 
+Replace engine with either "chatgpt" or "gemini" depends on the AI you want to use
 Replace <language> with the programming language that you want. Hit enter, and watch the magic happen!
 
 ## Examples
