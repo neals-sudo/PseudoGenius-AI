@@ -36,15 +36,16 @@ GEMINI_API_KEY=your_gemini_api_key
 
 ### Usage
 
-Create your pseudocode code inside of pseudo.yaml file, and then run:
+1. Create your pseudocode code inside of pseudo.yaml file
+2. Run the following command:
 
 ```bash
 
 python main.py <engine> <language>
 ```
 
-Replace engine with either "chatgpt" or "gemini" depends on the AI you want to use
-Replace <language> with the programming language that you want. Hit enter, and watch the magic happen!
+3. Replace engine with either "chatgpt" or "gemini" depending on the AI you want to use. 
+4. Replace <language> with the programming language that you want. Hit enter, and watch the magic happen!
 
 ## Examples
 
