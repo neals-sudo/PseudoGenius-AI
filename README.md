@@ -19,32 +19,46 @@ pip install -r requirements.txt
 ```
 
 ### Setting Up Your OpenAI Key
-Before you start turning pseudocode into real code, you need to enter your OpenAI API key to PseudoGenius AI. 
+To use PseudoGenius AI, you'll need API keys for the AI models it supports.
 
-1. In your project directory, create a file named .env.
-2. Open .env and add the following line:
+1. Create a .env file: In the project's root directory, create a new file named .env. This will store your API keys securely.
+
+2. Add your keys to .env:
+
 ```makefile
-
 OPENAI_API_KEY=your_openai_api_key
 GEMINI_API_KEY=your_gemini_api_key
 ```
-3. Replace your_openai_api_key with your actual OpenAI API key.
-4. Replace your_gemini_api_key with your GEMINI API key from here.
+- Replace your_openai_api_key with your actual OpenAI API Key (obtainable from your OpenAI account).
+- Replace your_gemini_api_key with your Gemini API key. Follow the link below to get one.
 
-You can get Google GEMINI API Key for free [here!](https://aistudio.google.com/app/apikey)
+Get Your Free Gemini API Key [here](https://aistudio.google.com/app/apikey)
 
 ### Usage
-
-1. Create your pseudocode code inside of pseudo.yaml file
-2. Run the following command:
+1. Craft your pseudocode in pseudo.yaml: Ensure your pseudocode is saved within the [pseudo.yaml](/pseudo.yaml) file.
+2. Execute the main script: Run the following command in your terminal:
 
 ```bash
-
 python main.py <engine> <language>
 ```
+- Choose Your Engine: Replace <engine> with either chatgpt or gemini to select your desired AI model.
+- Specify the Language: Replace <language> with the target programming language (e.g., python, javascript, java, etc.).
 
-3. Replace engine with either "chatgpt" or "gemini" depending on the AI you want to use. 
-4. Replace <language> with the programming language that you want. Hit enter, and watch the magic happen!
+
+Absolutely! Here's a revised version of your README.md usage section, focusing on clarity, consistency, and a slightly more professional tone:
+
+Usage
+Craft your pseudocode in pseudo.yaml: Ensure your pseudocode follows the expected format and is saved within the pseudo.yaml file.
+
+Execute the main script: Run the following command in your terminal:
+
+### Example Usage:
+
+To generate Python code using ChatGPT, you would run:
+
+```bash
+python main.py chatgpt python
+```
 
 ## Examples
 
