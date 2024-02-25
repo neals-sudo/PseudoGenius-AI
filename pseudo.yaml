@@ -1,18 +1,27 @@
 Return:
-  description: "Fetch a random fact about cats from an external API and return it to the user"
-  steps:
-    - action: "Send GET request"
-      url: "https://meowfacts.herokuapp.com/?count=1"
-      description: "Request a random cat fact from the API"
-      
-    - action: "Decode JSON response"
-      description: "Extract the JSON object from the API response"
-      
-    - action: "Read Fact"
-      description: "Access the 'data' dictionary and retrieve the first item (fact)"
-      item: "data[0]"
-      
-    - action: "Return Fact"
-      description: "Return the extracted fact to the user"
-  validation: "make sure the http response is 200 and the response is valid"
-  logs: "print every step of the way of the code and stop program if any error happened"
+  description: Fetches a random cat fact from an external API and returns it to the user.
+
+steps:
+  - action: Send GET request
+    url: https://meowfacts.herokuapp.com/?count=1
+    description: Request a random cat fact from the MeowFacts API.
+
+  - action: Decode JSON response
+    description: Parse the JSON response from the API.
+    error_handling: # Handle potential errors
+      action: Fail  # Choose an action: Fail, Retry (with parameters), or Continue
+      message: "Failed to decode JSON response. Check API response format."
+
+  - action: Read Fact
+    description: Extract the cat fact from the decoded JSON data.
+    item: data[0]
+    error_handling:
+      action: Fail
+      message: "Could not find 'data' key or fact in JSON response."
+
+  - action: Return Fact
+    description: Return the extracted cat fact to the user.
+
+logs:
+  - level: INFO  # Log at informational level for each step
+  - on_error: DEBUG  # Increase log level to DEBUG if an error occurs
