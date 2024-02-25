@@ -1,8 +1,6 @@
 # PseudoGenius AI 🚀
 
-Hey there! Welcome to **PseudoGenius AI**: Your new best friend for coding your own pseudocode language and converting it into runnable code in whatever language you need without worrying about syntax!
-
-It supports both ChatGPT-4 and Gemini Pro!
+The future of programming is here! Effortlessly transform pseudocode into real code across languages with the groundbreaking power of ChatGPT-4 and Gemini Pro.
 
 ## How it works
 
